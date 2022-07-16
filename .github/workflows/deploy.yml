@@ -1,0 +1,15 @@
+name: Deploy
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy
+        run: |
+          TAG=akviring/rust-builder:1.56.0-01
+          docker build . -t $TAG
+          docker image push docker.io/$TAG
