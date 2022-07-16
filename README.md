@@ -1,19 +1,9 @@
-# Docker образ для сборки rust приложений
+# Docker image for build rust application
 
-## Состав
+## Features
 
-- rustс & cargo
-- cargo-chef
-- docker клиент
-- cargo-fetcher
-- все внешние зависмости проекта cheetah
-
-
-## Обновление зависимостей
-
-Необходимо в основном проекте выполнить команду в каталоге server
-```
-cargo fetcher --url file:///tmp/crates/ --include-index mirror
-```
-После этого скопировать crates в каталог данного проекта.
-Данное действие необходимо выполнять после каждого изменения зависимостей проекта, так как проекты собираются с флагом --offline
+- stable & nightly rust
+- rustfmt
+- cargo2junit
+- cargo-outdated
+- cargo-udeps
