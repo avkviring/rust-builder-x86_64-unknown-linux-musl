@@ -11,8 +11,11 @@ RUN apt-get install -y openssh-client
 RUN rustup override set 1.60.0
 RUN rustup component add rustfmt
 RUN rustup target add x86_64-unknown-linux-musl
+RUN rustup toolchain install nightly
 RUN cargo install cargo-fetcher --features fs
 RUN cargo install cargo2junit
+RUN cargo install cargo-outdated
+RUN cargo install cargo-udeps
 
 
 
