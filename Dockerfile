@@ -15,6 +15,7 @@ RUN rustup toolchain install nightly
 RUN cargo install cargo2junit
 RUN cargo install cargo-outdated
 RUN cargo install cargo-udeps
+RUN rustup component add clippy
 
 
 
