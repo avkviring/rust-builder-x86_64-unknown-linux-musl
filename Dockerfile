@@ -16,6 +16,7 @@ RUN cargo install cargo2junit
 RUN cargo install cargo-outdated
 RUN cargo install cargo-udeps
 RUN rustup component add clippy
+RUN rustup component add rustfmt --toolchain nightly-x86_64-unknown-linux-gnu
 
 
 
