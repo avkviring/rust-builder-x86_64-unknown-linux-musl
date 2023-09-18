@@ -1,4 +1,4 @@
-FROM rust:1.65.0
+FROM rust:1.66.0
 RUN cargo install cargo-chef
 RUN apt-get update && \
     apt-get install -y musl-tools ca-certificates curl gnupg lsb-release
